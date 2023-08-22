@@ -3,3 +3,8 @@ az group create -l westus -n testRG --subscription 652453d9-80c1-44fa-90e2-2cbb4
  az group delete -n myResourceGroup
  az group delete -n testRG
 az group delete -n testRG1
+
+
+az deployment create --name demoRGDeployment --location "West US" --template-file ./rg.json
+
+az deployment sub delete -n demoRGDeployment --subscription "Azure subscription 1"

@@ -18,6 +18,12 @@
         "apiVersion": "2018-05-01",
         "location": "[parameters('rgLocation')]",
         "name": "[parameters('rgName')]"
+      },
+      {
+        "type": "Microsoft.Resources/resourceGroups",
+        "apiVersion": "2018-05-01",
+        "location": "[parameters('rgLocation')]",
+        "name": "testRGwithARM"
       }
     ],
     "outputs": {}
