@@ -1,0 +1,5 @@
+az group create -l westus -n testRG --subscription 652453d9-80c1-44fa-90e2-2cbb494003c1
+
+ az group delete -n myResourceGroup
+ az group delete -n testRG
+az group delete -n testRG1
