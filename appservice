@@ -1,0 +1,22 @@
+    1. Deploy to azure web app in docker container
+
+    - az group create --name myResourceGroup --location "mylocation"
+    - az appservice plan create --name myAppServicePlan --resource-group myResourceGroup --sku B1 --is-linux
+    - az webapp create --resource-group myResourceGroup --plan myAppServicePlan --name <app-name> --deployment-container-image-name <azure-container-registry-name>.azurecr.io/mydockerimage:v1.0.0
+
+    2. Deploy to azure web app from local git
+    - az group create --name myResourceGroup --location mylocation
+    - az appservice plan create --name myAppServicePlan --resource-group myResourceGroup --sku FREE
+    - az webapp create --name myWebApp --resource-group myResourceGroup --plan myAppServicePlan --deployment-local-git
+    - git remote add azure <local-git-url>
+    - git push azure master
+
+    3. Deploy to azure web app from local folder
+    - az group create --name myResourceGroup --location mylocation
+    - az appservice plan create --name myAppServicePlan --resource-group myResourceGroup --sku FREE
+    - az webapp up --name myWebApp --plan myAppServicePlan --sku FREE
+
+    4. Deploy a zip to azure web app
+    - az webapp deployment source config-zip --resource-group myResourceGroup --name myWebApp --src zipFilePathLocation
+    5. Deploy to azure web app from git
+    - az webapp deployment source config --branch master --manual-integration --name myWebApp --repo-url <gith url> --resource-group myResourceGroup
