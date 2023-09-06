@@ -1,0 +1,18 @@
+az login
+  516  clear
+  517  az aks get-credentials --resource-group devRG --name devCluster
+  518  kubectl get node
+  519  kubectl get ns
+  520  kubectl get pod --all-namespaces
+  521  clear
+  522  kubectl
+  523  cl;eqr
+  524  clear
+  525  kubectl run --help
+  526  kubectl run  n1 --image=nginx --port=80 
+  527  kubectl get pod
+  528  kubectl get pod
+  529  kubectl expose
+  530  kubectl expose --help
+  531  kubectl expose POD n1 --port=80 --target-port=80  --name=n1s --type=LoadBalancer
+  532  kubectl get svc
