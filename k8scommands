@@ -16,3 +16,47 @@ az login
   530  kubectl expose --help
   531  kubectl expose POD n1 --port=80 --target-port=80  --name=n1s --type=LoadBalancer
   532  kubectl get svc
+
+
+##############################
+502  az group create --name myResourceGroup --location eastus
+  503  az aks create -g myResourceGroup -n myAKSCluster --enable-managed-identity --node-count 1 --enable-addons monitoring --generate-ssh-keys
+  504  clear
+  505  az aks install-cli
+  506  az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
+  507  cat ~/.kube/config
+  508  clear
+  509   d
+  510  cd azureadmin/
+  511  clear
+  512  ls -lrt
+  513  kubectl get node
+  514  kubectl apply -f nginx.yml 
+  515  kubectl apply -f nginx.yml 
+  516  kubectl apply -f nginx.yml 
+  517  clear
+  518  kubectl apply -f nginx.yml 
+  519  kubectl apply -f nginx.yml 
+  520  kubectl get -f nginx.yml 
+  521  kubectl get pod -n dev
+  522  clear
+  523  kubectl apply -f k8sdashboard.yml 
+  524  kubectl apply -f k8sdashboard.yml 
+  525  clesr
+  526  clear
+  527  kubectl get svc -n kubernetes-dashboard
+  528  kubectl -n kubernetes-dashboard create token kubernetes-dashboard
+  529  kubectl applt -f token.yml 
+  530  kubectl apply -f token.yml 
+  531  kubectl get secret admin-user -n kubernetes-dashboard -o jsonpath={".data.token"} | base64 -d
+  532  clear
+  533  kubectl  k8sjob.yml 
+  534  kubectl  apply -f k8sjob.yml 
+  535  kubectl get job
+  536  kubectl get pod
+  537  kubectl get pod -n dev
+  538  history'
+  539  history
+
+  az group delete --name myResourceGroup --yes --no-wait
+
