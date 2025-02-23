@@ -1,3 +1,11 @@
+# Go to Azure Portal → Your VM → Identity → Enable "System Assigned" or create a "User Assigned" identity.
+
+# Go to Azure Portal → Storage Account → Access Control (IAM) → Add Role Assignment
+# Select Storage Blob Data Reader (for read access) or Storage Blob Data Contributor (for read/write access)
+# Assign the role to the VM's Managed Identity.
+
+# pip install azure-identity azure-storage-blob
+
 from azure.identity import ManagedIdentityCredential
 from azure.storage.blob import BlobServiceClient
 
